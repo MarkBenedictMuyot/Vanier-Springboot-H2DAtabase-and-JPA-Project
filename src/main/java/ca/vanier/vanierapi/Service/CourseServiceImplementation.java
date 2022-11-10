@@ -42,11 +42,12 @@ public class CourseServiceImplementation implements CourseService {
 
         if (Objects.nonNull(course.getCourseName()) && !"".equalsIgnoreCase(course.getCourseName())) {
             courseDB.setCourseName(course.getCourseName());
-            
+
         }
-        // if (Objects.nonNull(course.getTeacher()) && !"".equalsIgnoreCase(course.Teacher())) {
-            
-        //     courseDB.setTeacher(course.getTeacher());
+        // if (Objects.nonNull(course.getTeacher()) &&
+        // !"".equalsIgnoreCase(course.Teacher())) {
+
+        // courseDB.setTeacher(course.getTeacher());
         // }
 
         return courseRepository.save(courseDB);

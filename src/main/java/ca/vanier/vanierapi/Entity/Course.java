@@ -24,7 +24,7 @@ public class Course {
     private int id;
     @Column
     private String courseName;
-    @Column
+    
     @OneToOne
     @JoinColumn(name = "teacher_ID", referencedColumnName = "id")
     Teacher teacher;
