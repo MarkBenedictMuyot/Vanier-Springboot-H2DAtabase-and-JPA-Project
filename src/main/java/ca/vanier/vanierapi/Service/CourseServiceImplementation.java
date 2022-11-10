@@ -38,14 +38,14 @@ public class CourseServiceImplementation implements CourseService {
     // update course in the courserepo
     @Override
     public Course updateCourse(Course course, Integer courseID) {
-        Course course1 = courseRepository.findById(courseID).get();
+        Course courseDB = courseRepository.findById(courseID).get();
 
         if (Objects.nonNull(course.getCourseName()) && !"".equalsIgnoreCase(course.getCourseName())) {
-            course1.setCourseName(course.getCourseName());
-            course1.setTeacher(course.getTeacher());
+            courseDB.setCourseName(course.getCourseName());
+            courseDB.setTeacher(course.getTeacher());
         }
 
-        return courseRepository.save(course1);
+        return courseRepository.save(courseDB);
     }
 
 }

@@ -48,11 +48,8 @@ public class StudentServiceImplementation implements StudentService {
             studentDB.setFirstName(
                     student.getFirstName());
         }
-        if (Objects.nonNull(student.getLastName())
-                && !"".equalsIgnoreCase(
-                        student.getLastName())) {
-            studentDB.setLastName(
-                    student.getLastName());
+        if (Objects.nonNull(student.getLastName()) && !"".equalsIgnoreCase(student.getLastName())) {
+            studentDB.setLastName(student.getLastName());
         }
         if (Objects.nonNull(student.getEmail())
                 && !"".equalsIgnoreCase(

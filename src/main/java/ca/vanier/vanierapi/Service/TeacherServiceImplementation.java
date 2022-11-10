@@ -28,19 +28,15 @@ public class TeacherServiceImplementation implements TeacherService {
     }
 
     // find id then delete from teacher repo
-    @Override
-    public void deleteTeacherID(Integer teacherID) {
-        teacherRepository.deleteById(teacherID);
-
-    }
+ 
 
     @Override
-    public Teacher updateteacher(Teacher teacher, Integer teacherID) {
-        Teacher teacherDB = teacherRepository.findById(teacherID)
-        .get();
+    public Teacher updateTeacher(Teacher teacher, Integer teacherId) {
+        Teacher teacherDB = teacherRepository.findById(teacherId)
+                .get();
         if (Objects.nonNull(teacher.getFirstName())
                 && !"".equalsIgnoreCase(
-                       teacher.getFirstName())) {
+                        teacher.getFirstName())) {
             teacherDB.setFirstName(
                     teacher.getFirstName());
         }
@@ -57,6 +53,12 @@ public class TeacherServiceImplementation implements TeacherService {
                     teacher.getEmail());
         }
         return teacherRepository.save(teacherDB);
+    }
+
+    @Override
+    public void deleteTeacherID(Integer teacherId) {
+        teacherRepository.deleteById(teacherId);
+        
     }
 
 }

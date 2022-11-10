@@ -11,8 +11,10 @@ public interface TeacherService {
     List<Teacher> listTeacher();
 
     // update
-    Teacher updateteacher(Teacher teacher, Integer teacherID);
+    Teacher updateTeacher(Teacher teacher, Integer teacherId);
 
     // delete
-    void deleteTeacherID(Integer teacherID);
+    void deleteTeacherID(Integer teacherId);
+
+
 }
