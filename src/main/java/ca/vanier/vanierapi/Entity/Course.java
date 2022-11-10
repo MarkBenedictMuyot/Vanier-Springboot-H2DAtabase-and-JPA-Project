@@ -24,7 +24,7 @@ public class Course {
     private int id;
     @Column
     private String courseName;
-    
+
     @OneToOne
     @JoinColumn(name = "teacher_ID", referencedColumnName = "id")
     Teacher teacher;
@@ -32,6 +32,10 @@ public class Course {
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "students_ID", referencedColumnName = "id")
     List<Student> students = new ArrayList<>();
+
+    public Course() {
+
+    }
 
     public Course(int id, String courseName, Teacher teacher, List<Student> students) {
         this.id = id;

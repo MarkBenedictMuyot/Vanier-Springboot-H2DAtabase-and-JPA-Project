@@ -14,6 +14,9 @@ public class CourseController {
     @Autowired
     private CourseService courseService;
 
+    public CourseController() {
+    }
+
     // Save operation
     @PostMapping("/course")
     public Course saveCourse(@Valid @RequestBody Course course) {
@@ -29,7 +32,7 @@ public class CourseController {
     // Update operation
     @PutMapping("/course/{id}")
     public Course updateCourse(@RequestBody Course course, @PathVariable("id") Integer courseId) {
-        return courseService.updateCourse(course,courseId);
+        return courseService.updateCourse(course, courseId);
     }
 
     // Delete operation

@@ -14,6 +14,9 @@ public class StudentController {
     @Autowired
     private StudentService studentService;
 
+    public StudentController() {
+    }
+
     // Save operation
     @PostMapping("/students")
     public Student saveStudent(@Valid @RequestBody Student student) {

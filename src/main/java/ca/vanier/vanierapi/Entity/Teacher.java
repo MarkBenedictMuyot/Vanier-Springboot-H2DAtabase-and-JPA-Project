@@ -1,6 +1,6 @@
 package ca.vanier.vanierapi.Entity;
 
-import javax.persistence.Column;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,6 +20,10 @@ public class Teacher {
     private String lastName;
 
     private String email;
+
+    public Teacher() {
+
+    }
 
     public Teacher(int id, String firstName, String lastName, String email) {
         this.id = id;

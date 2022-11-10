@@ -15,6 +15,10 @@ public class TeacherController {
     @Autowired
     private TeacherService teacherService;
 
+    public TeacherController() {
+
+    }
+
     // Save operation
     @PostMapping("/teachers")
     public Teacher saveTeacher(@Valid @RequestBody Teacher teacher) {
